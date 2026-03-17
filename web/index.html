@@ -1,0 +1,782 @@
+<!doctype html>
+<html>
+  <head>
+    <!--
+  If you are serving your web app in a path other than the root, change the
+  href value below to reflect the base path you are serving from.
+
+  The path provided below has to start and end with a slash "/" in order for
+  it to work correctly.
+
+  For more details:
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+  This is a placeholder for base href that will be replaced by the value of
+  the `--base-href` argument provided to `flutter build`.
+-->
+    <base href="/" />
+
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta
+      name="description"
+      content="Ammar Academy - SAT Preparation Excellence"
+    />
+
+    <!-- Google Sign-In -->
+    <meta name="google-signin-client_id" content="408680883858-0cd358cltphbiqppt9t2pvctbv7gg4k2.apps.googleusercontent.com" />
+
+    <!-- iOS meta tags & icons -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="educational_system" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <title>Ammar Academy - SAT Preparation Excellence</title>
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Load player.js library for Bunny.net video player -->
+    <script src="https://assets.mediadelivery.net/playerjs/playerjs-latest.min.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        /* Prevent browser back/forward navigation on horizontal scroll */
+        overscroll-behavior-x: none;
+        overscroll-behavior-y: auto;
+      }
+
+      /* Prevent horizontal overscroll on the entire page */
+      html {
+        overscroll-behavior-x: none;
+      }
+
+      /* Splash Screen Styles */
+      #splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          #f5f0e8 0%,
+          #e8dcc8 50%,
+          #f0e5d5 100%
+        );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+        overflow: hidden;
+      }
+
+      /* Decorative background shapes */
+      #splash-screen::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(247, 147, 30, 0.08) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      #splash-screen::after {
+        content: "";
+        position: absolute;
+        bottom: -15%;
+        left: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(14, 15, 59, 0.05) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        animation: float 8s ease-in-out infinite reverse;
+      }
+
+      #splash-screen.fade-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .splash-logo-container {
+        position: relative;
+        margin-bottom: 40px;
+        animation: fadeInScale 1s ease-out;
+        z-index: 1;
+      }
+
+      .splash-logo {
+        width: 160px;
+        height: 160px;
+        background: white;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 40px rgba(14, 15, 59, 0.15);
+        position: relative;
+        overflow: hidden;
+        border: 3px solid #f7931e;
+      }
+
+      .splash-logo::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          rgba(247, 147, 30, 0.08),
+          transparent
+        );
+        animation: shimmer 3s infinite;
+      }
+
+      .splash-logo svg {
+        width: 100px;
+        height: 100px;
+        z-index: 1;
+      }
+
+      .splash-title {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 800;
+        color: #0e0f3b;
+        margin-bottom: 12px;
+        text-align: center;
+        animation: fadeInUp 1s ease-out 0.3s both;
+        letter-spacing: -1px;
+        z-index: 1;
+        position: relative;
+      }
+
+      .splash-title span {
+        color: #f7931e;
+      }
+
+      .splash-subtitle {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: #444444;
+        margin-bottom: 50px;
+        text-align: center;
+        animation: fadeInUp 1s ease-out 0.5s both;
+        z-index: 1;
+        position: relative;
+      }
+
+      .splash-loader {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        animation: fadeIn 1s ease-out 0.7s both;
+      }
+
+      .splash-loader::before,
+      .splash-loader::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #f7931e;
+      }
+
+      .splash-loader::before {
+        width: 60px;
+        height: 60px;
+        animation: spin 1.5s linear infinite;
+      }
+
+      .splash-loader::after {
+        width: 45px;
+        height: 45px;
+        top: 7.5px;
+        left: 7.5px;
+        border-top-color: white;
+        animation: spin 1s linear infinite reverse;
+      }
+
+      .splash-loading-text {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #666666;
+        margin-top: 20px;
+        text-align: center;
+        animation: fadeIn 1s ease-out 0.9s both;
+        z-index: 1;
+        position: relative;
+      }
+
+      /* Animations */
+      @keyframes fadeInScale {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes shimmer {
+        0% {
+          transform: translateX(-100%) translateY(-100%) rotate(45deg);
+        }
+        100% {
+          transform: translateX(100%) translateY(100%) rotate(45deg);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .splash-logo {
+          width: 140px;
+          height: 140px;
+        }
+
+        .splash-logo svg {
+          width: 90px;
+          height: 90px;
+        }
+
+        .splash-title {
+          font-size: 24px;
+        }
+
+        .splash-subtitle {
+          font-size: 16px;
+        }
+      }
+    </style>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "1071098264890525"); // Initialize the Pixel with your ID
+      // fbq('track', 'PageView'); // Auto-tracking disabled for granular control
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1071098264890525&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+      <div class="splash-logo-container">
+        <div class="splash-logo">
+          <!-- Ammar Academy Logo -->
+          <svg
+            id="logo"
+            xmlns="http://www.w3.org/2000/svg"
+            width="81.743"
+            height="47.994"
+            viewBox="0 0 81.743 47.994"
+          >
+            <g id="layer-MC1" transform="translate(0 0)">
+              <g
+                id="Group_608"
+                data-name="Group 608"
+                transform="translate(54.417 40.183)"
+              >
+                <path
+                  id="path2"
+                  d="M-37.358-.058h1.385V7.519h-.905V1.306l-.036-.011c-.025.063-.053.125-.075.19q-.95,2.91-1.894,5.823c-.055.171-.126.245-.305.229-.249-.023-.56.071-.734-.052s-.183-.449-.261-.688q-.864-2.633-1.727-5.267a.724.724,0,0,0-.12-.245V7.513h-.921V-.065c.443,0,.879-.008,1.314.01.057,0,.133.126.16.207q.84,2.548,1.67,5.1c.114.349.231.7.365,1.1l2.084-6.412"
+                  transform="translate(42.951 0.067)"
+                  fill="#f7931e"
+                />
+              </g>
+              <g
+                id="Group_607"
+                data-name="Group 607"
+                transform="translate(37.408 40.195)"
+              >
+                <path
+                  id="path4"
+                  d="M-6.664-5.8V.057c.7,0,1.377.019,2.057,0A1.794,1.794,0,0,0-2.932-1.235,4.553,4.553,0,0,0-2.938-4.52,1.592,1.592,0,0,0-4.2-5.661c-.808-.1-1.629-.094-2.46-.134m-1,6.72V-6.648H-7.4c.854,0,1.708.013,2.561,0A3.035,3.035,0,0,1-1.67-3.639,5.324,5.324,0,0,1-2.151-.613,2.489,2.489,0,0,1-4.3.911c-1.109.06-2.223.014-3.36.014"
+                  transform="translate(7.661 6.651)"
+                  fill="#f7931e"
+                />
+              </g>
+              <g
+                id="Group_606"
+                data-name="Group 606"
+                transform="translate(46.3 40.204)"
+              >
+                <path
+                  id="path6"
+                  d="M0,0H5.286V.924H.964v2.3h4V4.1H.97V6.677h4.4v.9H0Z"
+                  fill="#f7931e"
+                />
+              </g>
+              <g
+                id="Group_605"
+                data-name="Group 605"
+                transform="translate(19.893 39.988)"
+              >
+                <path
+                  id="path8"
+                  d="M-36.964-34.035h.949a3.267,3.267,0,0,1-1.54,2.559,3.278,3.278,0,0,1-4-.6,3.681,3.681,0,0,1-.824-1.805,5.632,5.632,0,0,1,.151-2.923,3.211,3.211,0,0,1,3.578-2.238,2.714,2.714,0,0,1,2.37,1.683,6.131,6.131,0,0,1,.23.778c-.331,0-.615.007-.9-.007-.048,0-.119-.08-.135-.137a1.877,1.877,0,0,0-2.013-1.441,2.172,2.172,0,0,0-2.135,1.534,4.809,4.809,0,0,0,.051,3.295,2.084,2.084,0,0,0,2.158,1.365,1.965,1.965,0,0,0,1.878-1.459c.068-.2.117-.4.178-.61"
+                  transform="translate(42.498 39.058)"
+                  fill="#f7931e"
+                />
+              </g>
+              <g
+                id="Group_604"
+                data-name="Group 604"
+                transform="translate(11.362 40.188)"
+              >
+                <path
+                  id="path10"
+                  d="M-29.175-30.394l-1.078-3.266-.057,0-1.148,3.268Zm-2.567.84-.793,2.269h-1.008c.08-.226.154-.438.231-.648q1.218-3.361,2.432-6.722c.062-.172.14-.235.314-.222a4.387,4.387,0,0,0,.658,0c.178-.014.252.057.31.227q1.066,3.082,2.146,6.158l.424,1.217c-.346,0-.66.009-.974-.008-.058,0-.139-.1-.162-.168q-.315-.93-.609-1.868c-.051-.165-.115-.241-.3-.239-.885.013-1.771.006-2.668.006"
+                  transform="translate(33.543 34.88)"
+                  fill="#f7931e"
+                />
+              </g>
+              <g
+                id="Group_603"
+                data-name="Group 603"
+                transform="translate(28.436 40.188)"
+              >
+                <path
+                  id="path12"
+                  d="M-29.2-30.392l-1.08-3.265h-.057l-1.147,3.266Zm-3.361,3.109h-1.011l.52-1.433q1.072-2.958,2.139-5.918c.064-.178.136-.258.326-.241a4.255,4.255,0,0,0,.658,0,.253.253,0,0,1,.3.208q1.24,3.581,2.493,7.157c.024.07.044.142.073.237-.331,0-.639.01-.945-.008-.066,0-.157-.1-.183-.174q-.32-.942-.616-1.892a.243.243,0,0,0-.273-.208q-1.244.014-2.488,0a.243.243,0,0,0-.274.2c-.231.692-.478,1.379-.718,2.066"
+                  transform="translate(33.577 34.878)"
+                  fill="#f7931e"
+                />
+              </g>
+              <g
+                id="Group_602"
+                data-name="Group 602"
+                transform="translate(10.258 14.05)"
+              >
+                <path
+                  id="path14"
+                  d="M-238.8-147.883a26.27,26.27,0,0,1,2.309-11.366c-.337.234-.658.456-.978.68-1.025.719-2.052,1.436-3.072,2.162-.191.136-.3.067-.433-.079q-1.575-1.729-3.159-3.45a1.325,1.325,0,0,1-.106-.152l-.053.033a.287.287,0,0,0,0,.076,16.364,16.364,0,0,1,.532,3.815,26.431,26.431,0,0,1-.3,5.343c-.145.926-.4,1.835-.593,2.753a.2.2,0,0,1-.237.187c-.357-.008-.714,0-1.043,0a44.263,44.263,0,0,0-4.3-20.118,38.151,38.151,0,0,0-3.281,9.8,38.681,38.681,0,0,0-.85,10.311c-.386,0-.743.006-1.1-.007-.047,0-.118-.09-.133-.149-.219-.882-.484-1.756-.628-2.65a30.272,30.272,0,0,1-.356-3.31,19.907,19.907,0,0,1,.5-6.244c.009-.035.013-.072.031-.176-.327.354-.611.658-.893.965q-1.244,1.354-2.484,2.711c-.138.151-.258.124-.405.02q-1.908-1.344-3.819-2.682c-.067-.047-.136-.091-.215-.143a26.077,26.077,0,0,1,2.29,11.649h-1.386c-.141-.62-.27-1.237-.421-1.848a41.707,41.707,0,0,0-2.3-6.635,42.723,42.723,0,0,0-4.8-8.48,16.981,16.981,0,0,0-3.423-3.563c-.192-.143-.362-.317-.541-.478-.022-.02-.04-.046-.107-.124.209.092.356.155.5.22q6.8,3.053,13.6,6.111a.3.3,0,0,0,.354-.042q4.5-3.269,9.012-6.527c.2-.145.423-.261.632-.4a.243.243,0,0,1,.314.024c1.921,1.39,3.849,2.771,5.766,4.166,1.383,1.007,2.753,2.031,4.124,3.054a.292.292,0,0,0,.34.025q2.227-1,4.456-2l6.951-3.124q1.013-.455,2.028-.9c.1-.043.2-.076.352-.133-.5.473-.966.9-1.424,1.337A24.548,24.548,0,0,0-231.3-162.5a46.557,46.557,0,0,0-3.464,6.6,45.4,45.4,0,0,0-2.053,5.793c-.18.644-.313,1.3-.453,1.956-.043.2-.117.282-.337.27-.373-.021-.749-.006-1.2-.006"
+                  transform="translate(274.554 169.709)"
+                  fill="#0e0f3b"
+                />
+              </g>
+              <g
+                id="Group_601"
+                data-name="Group 601"
+                transform="translate(69.779 17.494)"
+              >
+                <path
+                  id="path16"
+                  d="M-19.489-18.463v6.05a8.437,8.437,0,0,0,3.068-.27,2.981,2.981,0,0,0,1.3-.793,2.925,2.925,0,0,0,.707-1.981,2.556,2.556,0,0,0-1.8-2.68,9.15,9.15,0,0,0-3.277-.326m-2.918-2.712a1.488,1.488,0,0,1,.148-.013c1.648.028,3.3.019,4.943.1a7.059,7.059,0,0,1,3.176.872,4.793,4.793,0,0,1,2.3,2.838,5.726,5.726,0,0,1-.295,4.348,5.12,5.12,0,0,1-3.446,2.769c-.075.02-.149.043-.223.066-.006,0-.009.011-.03.041l5.391,7.331c-.105.006-.178.014-.251.014-1.024,0-2.047,0-3.071,0A.382.382,0,0,1-14.123-3c-1.533-2.179-3.079-4.349-4.6-6.535A.632.632,0,0,0-19.5-9.84v7.011h-2.911Z"
+                  transform="translate(22.407 21.188)"
+                  fill="#0e0f3b"
+                />
+              </g>
+              <g
+                id="Group_600"
+                data-name="Group 600"
+                transform="translate(0 16.156)"
+              >
+                <path
+                  id="path18"
+                  d="M-61.732-43.866l-3.013,6.511h5.888l-2.876-6.511m9.016,13.24c-1.053,0-2.068,0-3.083-.008-.065,0-.156-.108-.19-.185q-.791-1.789-1.566-3.586a.333.333,0,0,0-.364-.232q-3.9.01-7.8,0a.324.324,0,0,0-.35.221c-.548,1.2-1.11,2.4-1.659,3.6a.29.29,0,0,1-.313.2c-.961-.008-1.921,0-2.93,0l9.293-19.713,8.965,19.714"
+                  transform="translate(70.974 50.34)"
+                  fill="#0e0f3b"
+                />
+              </g>
+              <g
+                id="Group_599"
+                data-name="Group 599"
+                transform="translate(50.82 16.156)"
+              >
+                <path
+                  id="path20"
+                  d="M-80.942-87.98l-2.876-6.51-3.012,6.51ZM-93.06-81.252l9.293-19.713,8.958,19.7c-.092.005-.158.013-.224.013-.914,0-1.828,0-2.742,0a.283.283,0,0,1-.311-.2c-.515-1.2-1.043-2.391-1.558-3.589a.316.316,0,0,0-.344-.227q-3.914.011-7.828,0a.324.324,0,0,0-.345.228c-.546,1.193-1.1,2.381-1.65,3.575a.3.3,0,0,1-.327.213c-.96-.01-1.921,0-2.923,0"
+                  transform="translate(93.06 100.965)"
+                  fill="#0e0f3b"
+                />
+              </g>
+              <g
+                id="Group_598"
+                data-name="Group 598"
+                transform="translate(22.075 14.317)"
+              >
+                <path
+                  id="path22"
+                  d="M-25.9-13.539a2.32,2.32,0,0,1-1.4,2.188,1.186,1.186,0,0,1-.571.065,2.32,2.32,0,0,1-1.753-3.059,1.922,1.922,0,0,1,2.09-1.168,1.966,1.966,0,0,1,1.625,1.79c.006.061.008.123.011.185"
+                  transform="translate(29.773 15.537)"
+                  fill="#0e0f3b"
+                />
+              </g>
+              <g
+                id="Group_597"
+                data-name="Group 597"
+                transform="translate(43.307 14.616)"
+              >
+                <path
+                  id="path24"
+                  d="M-25.978-13.078a2.382,2.382,0,0,1-1.468,2.2,1.33,1.33,0,0,1-1.392-.132,2.334,2.334,0,0,1-.864-2.783A1.91,1.91,0,0,1-27.737-15a1.889,1.889,0,0,1,1.692,1.5c.033.15.048.3.066.419"
+                  transform="translate(29.868 15.008)"
+                  fill="#0e0f3b"
+                />
+              </g>
+              <g
+                id="Group_596"
+                data-name="Group 596"
+                transform="translate(63.824 40.196)"
+              >
+                <path
+                  id="path26"
+                  d="M-24.994-51.427h-.984v-.261c0-.853.005-1.705-.005-2.558a.878.878,0,0,0-.119-.42c-.818-1.359-1.645-2.711-2.47-4.066-.047-.077-.092-.155-.164-.278.39,0,.742-.008,1.093.008.055,0,.117.1.156.172q.922,1.594,1.839,3.191c.045.078.092.154.157.263.061-.1.11-.17.154-.246.613-1.064,1.229-2.125,1.834-3.194a.332.332,0,0,1,.346-.2c.29.013.581,0,.918,0-.063.112-.1.189-.148.263-.829,1.362-1.661,2.721-2.484,4.087a.879.879,0,0,0-.119.42c-.011.844-.005,1.688-.005,2.532Z"
+                  transform="translate(28.736 59.017)"
+                  fill="#f7931e"
+                />
+              </g>
+              <g
+                id="Group_595"
+                data-name="Group 595"
+                transform="translate(24.786)"
+              >
+                <path
+                  id="path32"
+                  d="M-39.067-25.7l-3.44-.742c.032.852.065,1.7.1,2.555h.083a.125.125,0,0,1,.14.123c.051.377.1.753.153,1.13.042.312.08.625.122.938.038.286.079.571.116.856s.075.59.114.884.083.607.124.91.082.631.123.947q.041.316.086.632c.015.108-.03.162-.139.162h-2.092a.148.148,0,0,1-.144-.164c.018-.188.033-.376.051-.563.02-.213.042-.426.063-.639.022-.233.043-.466.065-.7l.069-.748c.023-.252.046-.505.07-.757.019-.2.041-.4.06-.6s.031-.376.049-.563c.016-.168.035-.336.052-.5.014-.15.026-.3.039-.451q.036-.39.073-.78a.12.12,0,0,1,.124-.109h.151a.053.053,0,0,0,.013-.005c0-.015,0-.033,0-.051q0-1.264,0-2.528a.056.056,0,0,0-.053-.067c-.264-.059-.526-.12-.789-.181l-1.043-.244L-44.88-27a.041.041,0,0,1-.026-.068c.009-.014.014-.031.024-.053l.572-.133.629-.145.816-.189.86-.2,1.016-.236.86-.2,1.172-.271.86-.2.838-.195,1.24-.285,1.368-.318a.169.169,0,0,1,.068,0l1.132.22,1.3.248,1.285.251,1.16.221,1.321.257c.281.055.563.111.844.165l1.119.212c.33.063.659.129.988.193l1.11.213c.068.013.072.016.087.094-1.71.587-3.434,1.131-5.186,1.616.051.061.1.117.142.171a16.484,16.484,0,0,1,1.136,1.489,5.458,5.458,0,0,1,.508.88,1.194,1.194,0,0,1,.075.268c.011.067-.025.095-.094.1-.194.005-.389,0-.582.02-.223.019-.446.049-.667.084a9.559,9.559,0,0,0-1.341.327,15.945,15.945,0,0,0-2.28.93c-.465.229-.923.471-1.384.707-.133.068-.266.136-.4.2a.465.465,0,0,1-.516-.059,7.786,7.786,0,0,0-1.533-.952,9.106,9.106,0,0,0-1.172-.453,12.007,12.007,0,0,0-1.313-.329c-.347-.067-.7-.121-1.045-.188-.22-.042-.438-.094-.656-.146a.672.672,0,0,1-.155-.066.206.206,0,0,1-.113-.231,1.5,1.5,0,0,1,.176-.478,7.745,7.745,0,0,1,.719-1.092c.268-.35.548-.692.822-1.038.01-.013.019-.026.031-.043"
+                  transform="translate(44.915 29.493)"
+                  fill="#0e0f3b"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <h1 class="splash-title">Ammar Academy</h1>
+      <p class="splash-subtitle">SAT Preparation Excellence</p>
+      <div class="splash-loader"></div>
+      <p class="splash-loading-text" id="loading-text">Loading resources...</p>
+    </div>
+
+    <script>
+      // Track loading state
+      let flutterReady = false;
+      let domReady = false;
+      let assetsReady = false;
+      let splashRemoved = false;
+      let readyCheckInterval = null;
+
+      function updateLoadingText(text) {
+        const loadingText = document.getElementById("loading-text");
+        if (loadingText) {
+          loadingText.textContent = text;
+        }
+      }
+
+      function removeSplashScreen() {
+        if (splashRemoved) return;
+
+        const splashScreen = document.getElementById("splash-screen");
+        if (splashScreen) {
+          splashRemoved = true;
+          updateLoadingText("Ready!");
+
+          // Clear any intervals
+          if (readyCheckInterval) {
+            clearInterval(readyCheckInterval);
+          }
+
+          splashScreen.classList.add("fade-out");
+          setTimeout(() => {
+            splashScreen.remove();
+          }, 500);
+        }
+      }
+
+      function checkIfFullyLoaded() {
+        // Check if Flutter app is fully rendered and interactive
+        const flutterView = document.querySelector("flutter-view");
+        const fltGlassPane = document.querySelector("flt-glass-pane");
+
+        // Check if there are any pending images
+        const images = document.querySelectorAll("img");
+        let allImagesLoaded = true;
+        images.forEach((img) => {
+          if (!img.complete || img.naturalHeight === 0) {
+            allImagesLoaded = false;
+          }
+        });
+
+        // Check if fonts are loaded
+        const fontsLoaded = document.fonts
+          ? document.fonts.status === "loaded"
+          : true;
+
+        // Mark as ready if Flutter view exists and is rendered
+        if (flutterView || fltGlassPane) {
+          assetsReady = allImagesLoaded && fontsLoaded;
+        }
+
+        return flutterReady && domReady && assetsReady;
+      }
+
+      function checkAndRemoveSplash() {
+        if (checkIfFullyLoaded()) {
+          // Add extra delay to ensure everything is painted and settled
+          setTimeout(removeSplashScreen, 800);
+        } else {
+          // Update loading text based on what's ready
+          if (!domReady) {
+            updateLoadingText("Loading resources...");
+          } else if (!flutterReady) {
+            updateLoadingText("Initializing app...");
+          } else if (!assetsReady) {
+            updateLoadingText("Loading assets...");
+          }
+        }
+      }
+
+      // Listen for Flutter first frame
+      window.addEventListener("flutter-first-frame", function () {
+        flutterReady = true;
+        checkAndRemoveSplash();
+      });
+
+      // Wait for DOM to be fully loaded
+      if (document.readyState === "complete") {
+        domReady = true;
+        checkAndRemoveSplash();
+      } else {
+        window.addEventListener("load", function () {
+          domReady = true;
+          checkAndRemoveSplash();
+        });
+      }
+
+      // Wait for fonts to load
+      if (document.fonts) {
+        document.fonts.ready.then(function () {
+          checkAndRemoveSplash();
+        });
+      }
+
+      // Periodically check if everything is ready
+      readyCheckInterval = setInterval(function () {
+        if (splashRemoved) {
+          clearInterval(readyCheckInterval);
+          return;
+        }
+        checkAndRemoveSplash();
+      }, 200);
+
+      // Update loading text with animated dots
+      let loadingDots = 0;
+      const loadingInterval = setInterval(function () {
+        if (splashRemoved) {
+          clearInterval(loadingInterval);
+          return;
+        }
+        loadingDots = (loadingDots + 1) % 4;
+        const dots = ".".repeat(loadingDots);
+
+        let baseText = "Loading resources";
+        if (domReady && !flutterReady) {
+          baseText = "Initializing app";
+        } else if (flutterReady && !assetsReady) {
+          baseText = "Loading assets";
+        }
+
+        updateLoadingText(baseText + dots);
+      }, 500);
+
+      // Fallback: Remove splash screen after 20 seconds if something goes wrong
+      setTimeout(function () {
+        clearInterval(loadingInterval);
+        clearInterval(readyCheckInterval);
+        removeSplashScreen();
+      }, 20000);
+    </script>
+
+    <!-- Version Check Script -->
+    <script>
+      // Version checking system
+      const VERSION_CHECK_INTERVAL = 5 * 60 * 1000; // Check every 5 minutes
+      const VERSION_STORAGE_KEY = "app_version";
+      const LAST_CHECK_KEY = "last_version_check";
+
+      let currentVersion = null;
+      let versionCheckInterval = null;
+
+      async function fetchCurrentVersion() {
+        try {
+          // Add timestamp to prevent caching
+          const response = await fetch("/version.json?t=" + Date.now(), {
+            cache: "no-cache",
+            headers: {
+              "Cache-Control": "no-cache",
+              Pragma: "no-cache",
+            },
+          });
+
+          if (!response.ok) {
+            console.warn("Failed to fetch version.json");
+            return null;
+          }
+
+          const versionData = await response.json();
+          return versionData;
+        } catch (error) {
+          console.warn("Error fetching version:", error);
+          return null;
+        }
+      }
+
+      async function checkForUpdates() {
+        const now = Date.now();
+        const lastCheck = localStorage.getItem(LAST_CHECK_KEY);
+
+        // Don't check too frequently (minimum 1 minute between checks)
+        if (lastCheck && now - parseInt(lastCheck) < 60000) {
+          return;
+        }
+
+        localStorage.setItem(LAST_CHECK_KEY, now.toString());
+
+        const latestVersion = await fetchCurrentVersion();
+
+        if (!latestVersion) {
+          return;
+        }
+
+        const storedVersion = localStorage.getItem(VERSION_STORAGE_KEY);
+
+        // First time loading or version changed
+        if (!storedVersion) {
+          localStorage.setItem(VERSION_STORAGE_KEY, latestVersion.version);
+          currentVersion = latestVersion.version;
+        } else if (storedVersion !== latestVersion.version) {
+          // Perform silent update in background
+          performSilentUpdate(latestVersion);
+        } else {
+          currentVersion = storedVersion;
+        }
+      }
+
+      function performSilentUpdate(versionData) {
+        // Update stored version
+        localStorage.setItem(VERSION_STORAGE_KEY, versionData.version);
+
+        // Perform hard refresh silently
+        window.location.reload(true);
+      }
+
+      // Initial version check on load
+      window.addEventListener("load", function () {
+        setTimeout(checkForUpdates, 2000); // Check 2 seconds after load
+      });
+
+      // Periodic version check
+      versionCheckInterval = setInterval(
+        checkForUpdates,
+        VERSION_CHECK_INTERVAL,
+      );
+
+      // Check when tab becomes visible (user returns to tab)
+      document.addEventListener("visibilitychange", function () {
+        if (!document.hidden) {
+          checkForUpdates();
+        }
+      });
+    </script>
+
+    <script src="flutter_bootstrap.js" async></script>
+  </body>
+</html>

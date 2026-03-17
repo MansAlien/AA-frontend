@@ -1,0 +1,364 @@
+{
+  "errors": {
+    "error": "Error occurred !",
+    "phone_required": "Please enter the phone number !",
+    "no_user_found_with_this_email": "No user found with this email",
+    "wrong_password": "Wrong password",
+    "user_not_found": "User not found",
+    "user_not_activated": "User not activated",
+    "unknown_error": "Unknown error",
+    "email_already_exists": "Email already exists",
+    "username_already_exists": "Username already exists",
+    "phone_already_exists": "Phone already exists",
+    "invalid_email": "Invalid email",
+    "invalid_phone": "Invalid phone",
+    "invalid_username": "Invalid username",
+    "invalid_password": "Invalid password",
+    "required": "Required",
+    "email_already_in_use": "Email already in use",
+    "weak_password": "Weak password",
+    "upload_image": "Please upload images !",
+    "lessImages": "you should select at least 3 images",
+    "incorrectOtp": "Incorrect OTP"
+  },
+  "success": {
+    "success": "Congratulations !",
+    "login_success": "Login successfully !",
+    "user_created": "User created successfully",
+    "password_changed": "Password changed successfully",
+    "password_reset": "Password reset successfully",
+    "user_activated": "User activated successfully",
+    "user_deactivated": "User deactivated successfully",
+    "user_deleted": "User deleted successfully",
+    "user_updated": "User updated successfully",
+    "user_logged_in": "User logged in successfully",
+    "user_logged_out": "User logged out successfully",
+    "user_complete_profile_sucess": "Completed profile successfully",
+    "save_successfully": "Save Successfully",
+    "user_registered": "User registered successfully",
+    "user_verified": "User verified successfully",
+    "user_unverified": "User unverified successfully",
+    "user_blocked": "User blocked successfully",
+    "user_unblocked": "User unblocked successfully",
+    "user_password_changed": "User password changed successfully",
+    "user_password_reset": "User password reset successfully",
+    "user_password_forgot": "User password forgot successfully",
+    "add_news": "News added successfully",
+    "add_trip": "Trip added successfully",
+    "comment_success": "Comment sent successfully",
+    "report_success": "Report sent successfully",
+    "update_trip": "Trip updated successfully",
+    "update_news": "News updated successfully",
+    "delete_news": "News deleted successfully",
+    "add_charity": "Charity added successfully",
+    "update_charity": "Charity updated successfully",
+    "delete_charity": "Charity deleted successfully",
+    "image_required": "Please pick an image !",
+    "save_account_info": " Saved account info successfully",
+    "register": "Registered Successfully",
+    "correctOtp": "Correct OTP",
+    "correctPhone": "Correct Phone"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "logout": "Logout",
+    "logout_message": "Are you sure you want to logout?",
+    "select": "Select",
+    "search": "Search",
+    "login_required": "Login Required",
+    "login_required_message": "You need to login to access this page",
+    "retry": "Retry"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "mark_all_read": "Mark all read",
+    "empty_title": "No notifications yet",
+    "empty_subtitle": "We'll notify you when something arrives",
+    "time_minutes_ago": "{{minutes}}m ago",
+    "time_hours_ago": "{{hours}}h ago",
+    "time_days_ago": "{{days}}d ago"
+  },
+  "my_courses": {
+    "continue": "Continue",
+    "start": "Start",
+    "empty_title": "No courses enrolled yet",
+    "empty_subtitle": "Browse available courses to get started",
+    "error_title": "Failed to load courses"
+  },
+  "subscription": {
+    "error_title": "Failed to load subscription"
+  },
+  "landing": {
+    "header": {
+      "home": "Home",
+      "features": "Features",
+      "courses": "Courses",
+      "about": "About",
+      "logo_text": "EduPlatform",
+      "prices": "Prices",
+      "contact": "Contact Us",
+      "login": "Login",
+      "hi": "Hi",
+      "my_profile": "My profile",
+      "my_courses": "My Courses",
+      "subscription": "Subscription",
+      "student": "Student",
+      "profile_page": {
+        "title": "My Profile",
+        "full_name": "Full Name",
+        "email": "Email",
+        "mobile_no": "Mobile No.",
+        "parent_phone": "Parent Phone",
+        "birthdate": "Birthdate",
+        "school_year": "School Year",
+        "upload_profile_image": "Upload Profile Image",
+        "change_password": "Change Password",
+        "edit_profile": "Edit Profile",
+        "save_changes": "Save Changes",
+        "cancel": "Cancel"
+      },
+      "teacher": "Teacher",
+      "insights": "Insights",
+      "groups": "Groups Settings"
+    },
+    "hero": {
+      "title": "Smart Preparation Leads to Smart Scores",
+      "subtitle": "Let's start our journey towards your dream.",
+      "get_started": "Get Started",
+      "watch_demo": "Watch Demo",
+      "title_part1": "Where Learning Meets ",
+      "title_part2": "Progress",
+      "description": "No confusion, no overload. Just well-structured courses that help you understand, apply, and grow with confidence.",
+      "see_courses": "See Courses"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "expert_instructors": {
+        "title": "Expert Instructors",
+        "description": "Learn from industry professionals"
+      },
+      "flexible_learning": {
+        "title": "Flexible Learning",
+        "description": "Study at your own pace"
+      },
+      "certificates": {
+        "title": "Certificates",
+        "description": "Earn recognized credentials"
+      }
+    },
+    "stats": {
+      "students": "Students",
+      "courses": "Courses",
+      "instructors": "Instructors",
+      "success_rate": "Success Rate"
+    },
+    "courses": {
+      "title": "Popular Courses",
+      "designed_for_you": "Courses Designed for You",
+      "explore_courses": "Explore The Courses",
+      "web_development": {
+        "title": "Web Development",
+        "description": "Master modern web technologies",
+        "duration": "12 weeks"
+      },
+      "data_science": {
+        "title": "Data Science",
+        "description": "Learn data analysis and ML",
+        "duration": "16 weeks"
+      },
+      "mobile_development": {
+        "title": "Mobile Development",
+        "description": "Build iOS and Android apps",
+        "duration": "14 weeks"
+      },
+      "english": {
+        "instructor": "Mr. Ammar Adel",
+        "title": "English Language Course",
+        "description": "Build strong English skills through clear lessons, practical examples."
+      },
+      "math": {
+        "instructor": "Mr. Aly Hussien",
+        "title": "Math Course",
+        "description": "Build a solid foundation in mathematics with clear explanations"
+      }
+    },
+    "benefits": {
+      "expert_designed_courses": {
+        "title": "Expert-Designed Courses",
+        "description": "Clear, well-structured courses created by experienced educators."
+      },
+      "simple_flexible_learning": {
+        "title": "Simple & Flexible Learning",
+        "description": "Learn anytime, anywhere with easy-to-follow content."
+      },
+      "real_results": {
+        "title": "Real Results",
+        "description": "Build practical skills and see measurable progress."
+      },
+      "quizzes": {
+        "title": "Quizzes After Every Unit",
+        "description": "Test understanding and track progress with quizzes after each unit."
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Learning?",
+      "subtitle": "Join thousands of students already learning on our platform",
+      "button": "Get Started for Free"
+    },
+    "download_app": {
+      "title": "Download Our Application Now",
+      "description": "Stay connected and learn on the go! Download our app to access courses, track your progress, and continue learning anytime, anywhere."
+    },
+    "contact_us": {
+      "title_part1": "Have questions or need ",
+      "title_part2": "support?",
+      "description": "We’d love to hear from you! Whether it’s a question, feedback, or a request, we’re ready to assist you every step of the way. Our team is committed to providing timely.",
+      "button": "Contact us",
+      "call_error": "Could not reach phone number",
+      "facebook_error": "Could not reach Facebook page",
+      "instagram_error": "Could not reach Instagram page",
+      "tiktok_error": "Could not reach TikTok page",
+      "whatsapp_error": "Could not reach WhatsApp page",
+      "phone_1": "+20 106 208 1806",
+      "phone_2": "+20 110 763 6738",
+      "facebook_page_name": "Ammar Academy"
+    },
+    "packages": {
+      "title": "Choose Your Plan",
+      "description": "Access high-quality courses with transparent pricing. Select the plan that works best for you and enjoy a structured, results-driven learning experience.",
+      "gold": {
+        "title": "Gold Package",
+        "description": "Suitable for G12",
+        "price": "3500",
+        "features": {
+          "f1": "3-month access to SAT English Course",
+          "f2": "3-month access to SAT Math course",
+          "f3": "Progress reports available",
+          "f4": "downloadable Material",
+          "f5": "25% discount on our live Zoom session"
+        }
+      },
+      "platinum": {
+        "title": "Platinum Package",
+        "description": "Suitable for grades 9, 10, 11",
+        "price": "9900",
+        "features": {
+          "f1": "12-month access to SAT English Course",
+          "f2": "12-month access to SAT Math course",
+          "f3": "12-month access to English Power Course",
+          "f4": "Progress reports available",
+          "f5": "downloadable Material",
+          "f6": "50% discount on our live Zoom session"
+        }
+      },
+      "feature_placeholder": "sit amet malesuada velit dapibus",
+      "subscribe": "Subscribe Now",
+      "currency": " EGP"
+    },
+    "testimonials": {
+      "title": "What Our Students Say",
+      "student1": {
+        "name": "Ali Ahmed",
+        "testimony": "Mr Ammar is organized and his explanation is perfect"
+      },
+      "student2": {
+        "name": "Malak Osama",
+        "testimony": "I achieved the score I needed after I joined Ammar Academy Course ❤️"
+      },
+      "student3": {
+        "name": "Mostafa Kamal",
+        "testimony": "الماث بقي سهل بالنسبالي بعد كورس عمار اكاديمي وشرح مستر احمد"
+      },
+      "student4": {
+        "name": "Omar Ahmed",
+        "testimony": "الحمد لله قدرت احقق اسكور 1420 من اول محاولة شكرا يا مستر عمار"
+      }
+    },
+    "academy_info": {
+      "title_part1": "Comprehensive Basics and Advanced courses that guide you to",
+      "title_part2": " +700 scores",
+      "questions": "+1500 questions",
+      "exams": "+20 Real Exams",
+      "videos": "+100 videos",
+      "students": "+5000 students",
+      "scores": "+750 scores",
+      "daily_plan": "+80 Days daily plan"
+    },
+    "floating_footer": {
+      "text_part1": "There are only ",
+      "highlight": "4 seats",
+      "text_part2": " in the English course group",
+      "button": "Book Now"
+    },
+    "leaderboard": {
+      "title_part1": "Your ",
+      "title_part2": "Progress",
+      "title_part3": ", Ranked",
+      "description": "Celebrate progress and achievement. Discover top-performing learners and get inspired to keep improving.",
+      "students": {
+        "student1": "Moataz Mohamed",
+        "student2": "Rami Ali",
+        "student3": "Omar Ahmed",
+        "student4": "Malak Mostafa",
+        "student5": "Hala Osama"
+      }
+    },
+    "footer": {
+      "copyright": "©All rights reserved • Ammar Academy 2026"
+    },
+    "login": {
+      "email": "Email",
+      "password": "Password",
+      "title": "Log in",
+      "welcome_back": "Welcome Back!",
+      "register": "Register",
+      "forgot_password": "Forgot Password?",
+      "signIn": "Sign In",
+      "other_login_methods": "Other Login Options",
+      "dont_have_account": "Don't have an account? ",
+      "create_account": "Create Account"
+    },
+    "register": {
+      "fullName": "Full Name",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "title": "Create Account",
+      "nationality": "Nationality",
+      "email": "Email",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "phone_number": "Phone Number",
+      "parent_phone_number": "Parent Phone Number",
+      "login": "Log in",
+      "already_have_account": "Already have an account? ",
+      "create_account": "Create Account"
+    },
+    "forgot_password": {
+      "email": "Email",
+      "send": "Send",
+      "title": "Forgot Password",
+      "description": "Please enter your email to receive a link to reset your password."
+    },
+    "reset_password": {
+      "old_password": "Old Password",
+      "new_password": "New Password",
+      "confirm_new_password": "Confirm New Password",
+      "reset": "Reset",
+      "title": "Reset Password",
+      "description": "Please enter your new password."
+    },
+    "validations": {
+      "required": "Required",
+      "invalid_email": "Invalid email",
+      "invalid_phone": "Invalid phone",
+      "invalid_password": "Invalid password",
+      "mismatch_password": "Passwords do not match",
+      "weak_password": "Weak password",
+      "invalid_name": "Invalid name",
+      "invalid_english_name": "Invalid english name",
+      "invalid_arabic_name": "Invalid arabic name",
+      "invalid_username": "Invalid username"
+    }
+  }
+}

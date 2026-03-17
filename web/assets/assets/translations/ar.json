@@ -1,0 +1,365 @@
+{
+  "errors": {
+    "error": "حدث خطا!",
+    "no_user_found_with_this_email": "لم يتم العثور على مستخدم بهذا البريد الإلكتروني",
+    "wrong_password": "كلمة المرور خاطئة",
+    "user_not_found": "لم يتم العثور على المستخدم",
+    "user_not_activated": "لم يتم تنشيط المستخدم",
+    "unknown_error": "خطأ غير معروف",
+    "email_already_exists": "البريد الإلكتروني موجود بالفعل",
+    "username_already_exists": "اسم المستخدم موجود بالفعل",
+    "phone_already_exists": "رقم الهاتف موجود بالفعل",
+    "invalid_email": "البريد الإلكتروني غير صالح",
+    "invalid_phone": "رقم الهاتف غير صالح",
+    "invalid_username": "اسم المستخدم غير صالح",
+    "invalid_password": "كلمة المرور غير صالحة",
+    "required": "مطلوب",
+    "phoneRequired": "برجاء ادخال رقم الهاتف!",
+    "email_already_in_use": "البريد الإلكتروني مستخدم بالفعل",
+    "weak_password": "كلمة المرور ضعيفة",
+    "image_required": "برجاء اختيار صورة !",
+    "upload_image": "من فضلك قم برفع الصور!",
+    "lessImages": "يجب عليك اختيار على الأقل 3 صور",
+    "incorrectOtp": "الرمز المرسل غير صحيح"
+  },
+  "success": {
+    "success": "تهانينا!",
+    "login_success": "تم تسجيل الدخول بنجاح !",
+    "user_created": "تم إنشاء المستخدم بنجاح",
+    "ads_successfully": "تم إنشاء الاعلان بنجاح",
+    "password_changed": "تم تغيير كلمة المرور بنجاح",
+    "password_reset": "تمت إعادة تعيين كلمة المرور بنجاح",
+    "user_activated": "تم تنشيط المستخدم بنجاح",
+    "user_deactivated": "تم إلغاء تنشيط المستخدم بنجاح",
+    "user_deleted": "تم حذف المستخدم بنجاح",
+    "user_updated": "تم تحديث المستخدم بنجاح",
+    "user_logged_in": "تم تسجيل الدخول بنجاح",
+    "user_logged_out": "تم تسجيل الخروج بنجاح",
+    "user_registered": "تم التسجيل بنجاح",
+    "user_verified": "تم التحقق من المستخدم بنجاح",
+    "user_unverified": "تم إلغاء التحقق من المستخدم بنجاح",
+    "user_blocked": "تم حظر المستخدم بنجاح",
+    "user_unblocked": "تم إلغاء حظر المستخدم بنجاح",
+    "user_password_changed": "تم تغيير كلمة المرور بنجاح",
+    "user_password_reset": "تمت إعادة تعيين كلمة المرور بنجاح",
+    "user_password_forgot": "تم إرسال رابط إعادة تعيين كلمة المرور بنجاح",
+    "user_complete_profile_sucess": "تم استكمال الملف الشخصى بنجاح",
+    "save_successfully": "تم الحفظ بنجاح",
+    "add_news": "تم إضافة الخبر بنجاح",
+    "add_trip": "تم إضافة الرحلة بنجاح",
+    "update_trip": "تم تحديث الرحلة بنجاح",
+    "comment_success": "تم إرسال التقييم بنجاح",
+    "report_success": "تم إرسال البلاغ بنجاح",
+    "update_news": "تم تحديث الخبر بنجاح",
+    "delete_news": "تم حذف الخبر بنجاح",
+    "add_charity": "تم إضافة الجمعية بنجاح",
+    "update_charity": "تم تحديث الجمعية بنجاح",
+    "delete_charity": "تم حذف الجمعية بنجاح",
+    "save_account_info": "تم  حفظ بيانات الحساب بنجاح",
+    "register": "تم التسجيل بنجاح",
+    "correctOtp": "الرمز المرسل صحيح",
+    "correctPhone": "رقم الهاتف صحيح"
+  },
+  "common": {
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "logout": "تسجيل الخروج",
+    "logout_message": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+    "select": "اختيار",
+    "search": "بحث",
+    "login_required": "تسجيل الدخول مطلوب",
+    "login_required_message": "يجب عليك تسجيل الدخول لعرض هذه الصفحة",
+    "retry": "إعادة المحاولة"
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "mark_all_read": "تعليم الكل كمقروء",
+    "empty_title": "لا توجد إشعارات بعد",
+    "empty_subtitle": "سنخطرك عند وصول شيء",
+    "time_minutes_ago": "منذ {{minutes}} دقيقة",
+    "time_hours_ago": "منذ {{hours}} ساعة",
+    "time_days_ago": "منذ {{days}} يوم"
+  },
+  "my_courses": {
+    "continue": "متابعة",
+    "start": "ابدأ",
+    "empty_title": "لم تسجل في أي دورات بعد",
+    "empty_subtitle": "تصفح الدورات المتاحة للبدء",
+    "error_title": "فشل تحميل الدورات"
+  },
+  "subscription": {
+    "error_title": "فشل تحميل الاشتراك"
+  },
+  "landing": {
+    "header": {
+      "home": "الرئيسية",
+      "features": "المميزات",
+      "courses": "الدورات",
+      "about": "عنا",
+      "logo_text": "منصة تعليمية",
+      "prices": "الأسعار",
+      "contact": "تواصل معنا",
+      "login": "تسجيل الدخول",
+      "hi": "مرحبا",
+      "my_profile": "ملفي الشخصي",
+      "my_courses": "دوراتي",
+      "subscription": "الاشتراك",
+      "student": "طالب",
+      "profile_page": {
+        "title": "ملفي الشخصي",
+        "full_name": "الاسم الكامل",
+        "email": "البريد الإلكتروني",
+        "mobile_no": "رقم الجوال",
+        "parent_phone": "رقم ولي الأمر",
+        "birthdate": "تاريخ الميلاد",
+        "school_year": "السنة الدراسية",
+        "upload_profile_image": "رفع صورة الملف الشخصي",
+        "change_password": "تغيير كلمة المرور",
+        "edit_profile": "تعديل الملف الشخصي",
+        "save_changes": "حفظ التغييرات",
+        "cancel": "إلغاء"
+      },
+      "teacher": "مدرب",
+      "insights": "إحصائيات",
+      "groups": "إعدادات المجموعات"
+    },
+    "hero": {
+      "title": "التحضير الذكي يؤدي إلى نتائج ممتازة",
+      "subtitle": "لنبدأ رحلتنا نحو حلمك.",
+      "get_started": "ابدأ الآن",
+      "watch_demo": "شاهد العرض التوضيحي",
+      "title_part1": "حيث يلتقي التعلم ",
+      "title_part2": "بالتقدم",
+      "description": "لا حيرة، لا عبء زائد. فقط دورات منظمة جيدًا تساعدك على الفهم والتطبيق والنمو بثقة.",
+      "see_courses": "شاهد الدورات"
+    },
+    "features": {
+      "title": "لماذا تختارنا",
+      "expert_instructors": {
+        "title": "مدربون خبراء",
+        "description": "تعلم من محترفي الصناعة"
+      },
+      "flexible_learning": {
+        "title": "تعلم مرن",
+        "description": "ادرس بالسرعة التي تناسبك"
+      },
+      "certificates": {
+        "title": "شهادات معتمدة",
+        "description": "احصل على شهادات معترف بها"
+      }
+    },
+    "stats": {
+      "students": "طالب",
+      "courses": "دورة",
+      "instructors": "مدرب",
+      "success_rate": "معدل النجاح"
+    },
+    "courses": {
+      "title": "الدورات الشائعة",
+      "designed_for_you": "دورات صممت خصيصا لك",
+      "explore_courses": "استكشف الدورات",
+      "web_development": {
+        "title": "تطوير الويب",
+        "description": "أتقن تقنيات الويب الحديثة",
+        "duration": "12 أسبوع"
+      },
+      "data_science": {
+        "title": "علم البيانات",
+        "description": "تعلم تحليل البيانات والتعلم الآلي",
+        "duration": "16 أسبوع"
+      },
+      "mobile_development": {
+        "title": "تطوير تطبيقات الجوال",
+        "description": "بناء تطبيقات iOS و Android",
+        "duration": "14 أسبوع"
+      },
+      "english": {
+        "instructor": "أ. عمار عادل",
+        "title": "كورس اللغة الإنجليزية",
+        "description": "ابنِ مهارات لغوية قوية في اللغة الإنجليزية من خلال دروس واضحة وأمثلة عملية."
+      },
+      "math": {
+        "instructor": "أ. علي حسين",
+        "title": "كورس الرياضيات",
+        "description": "ابنِ أساسًا قويًا في الرياضيات مع شرح واضح."
+      }
+    },
+    "benefits": {
+      "expert_designed_courses": {
+        "title": "دورات مصممة من قبل خبراء",
+        "description": "دورات واضحة ومنظمة جيدًا تم إنشاؤها بواسطة معلمين ذوي خبرة."
+      },
+      "simple_flexible_learning": {
+        "title": "تعلم بسيط ومرن",
+        "description": "تعلم في أي وقت وفي أي مكان بمحتوى سهل المتابعة."
+      },
+      "real_results": {
+        "title": "نتائج حقيقية",
+        "description": "بناء مهارات عملية ورؤية تقدم ملموس."
+      },
+      "quizzes": {
+        "title": "اختبارات بعد كل وحدة",
+        "description": "اختبر فهمك وتتبع تقدمك باختبارات بعد كل وحدة."
+      }
+    },
+    "cta": {
+      "title": "هل أنت مستعد لبدء التعلم؟",
+      "subtitle": "انضم إلى آلاف الطلاب الذين يتعلمون بالفعل على منصتنا",
+      "button": "ابدأ مجانًا"
+    },
+    "download_app": {
+      "title": "حمل تطبيقنا الآن",
+      "description": "ابق متصلاً وتعلم أثناء التنقل! حمل تطبيقنا للوصول إلى الدورات، وتتبع تقدمك، ومواصلة التعلم في أي وقت وفي أي مكان."
+    },
+    "contact_us": {
+      "title_part1": "هل لديك أسئلة أو تحتاج إلى ",
+      "title_part2": "دعم؟",
+      "description": "نحب أن نسمع منك! سواء كان سؤالاً أو ملاحظات أو طلبًا، نحن مستعدون لمساعدتك في كل خطوة. فريقنا ملتزم بتقديم الدعم في الوقت المناسب.",
+      "button": "اتصل بنا",
+      "call_error": "تعذر الوصول إلى رقم الهاتف",
+      "facebook_error": "تعذر الوصول إلى صفحة الفيسبوك",
+      "instagram_error": "تعذر الوصول إلى صفحة الانستجرام",
+      "tiktok_error": "تعذر الوصول إلى صفحة التيك توك",
+      "whatsapp_error": "تعذر الوصول إلى صفحة الواتساب",
+      "phone_1": "+20 106 208 1806",
+      "phone_2": "+20 110 763 6738",
+      "facebook_page_name": "أكاديمية عمار"
+    },
+    "packages": {
+      "title": "اختر خطتك",
+      "description": "احصل على دورات عالية الجودة بأسعار واضحة. اختر الخطة التي تناسبك واستمتع بتجربة تعليمية منظمة ومثمرة.",
+      "gold": {
+        "title": "الباقة الذهبية",
+        "description": "مناسب للصف الثاني عشر",
+        "price": "3500",
+        "features": {
+          "f1": "وصول لمدة 3 أشهر لدورة SAT اللغة الإنجليزية",
+          "f2": "وصول لمدة 3 أشهر لدورة SAT الرياضيات",
+          "f3": "تقارير التقدم متاحة",
+          "f4": "مواد قابلة للتنزيل",
+          "f5": "خصم 25% على جلسات Zoom المباشرة"
+        }
+      },
+      "platinum": {
+        "title": "الباقة البلاتينية",
+        "description": "مناسب للصفوف 9، 10، 11",
+        "price": "9900",
+        "features": {
+          "f1": "وصول لمدة 12 شهرًا لدورة SAT اللغة الإنجليزية",
+          "f2": "وصول لمدة 12 شهرًا لدورة SAT الرياضيات",
+          "f3": "وصول لمدة 12 شهرًا لدورة English Power",
+          "f4": "تقارير التقدم متاحة",
+          "f5": "مواد قابلة للتنزيل",
+          "f6": "خصم 50% على جلسات Zoom المباشرة"
+        }
+      },
+      "feature_placeholder": "هذا النص هو مثال لنص يمكن أن يستبدل",
+      "subscribe": "اشترك الأن",
+      "currency": " ج.م."
+    },
+    "testimonials": {
+      "title": "ماذا يقول طلابنا",
+      "student1": {
+        "name": "علي أحمد",
+        "testimony": "مستر عمار منظم وشرحه ممتاز"
+      },
+      "student2": {
+        "name": "ملك أسامة",
+        "testimony": "حصلت على الدرجة التي كنت أحتاجها بعد انضمامي لكورس أكاديمية عمار ❤️"
+      },
+      "student3": {
+        "name": "مصطفى كمال",
+        "testimony": "الماث بقي سهل بالنسبالي بعد كورس عمار اكاديمي وشرح مستر احمد"
+      },
+      "student4": {
+        "name": "عمر أحمد",
+        "testimony": "الحمد لله قدرت احقق اسكور 1420 من اول محاولة شكرا يا مستر عمار"
+      }
+    },
+    "academy_info": {
+      "title_part1": "كورسات تأسيس شاملة ومستوى متقدم تأهلك إلى",
+      "title_part2": " +700 درجة",
+      "questions": "+1500 سؤال",
+      "exams": "+20 امتحان حقيقي",
+      "videos": "+100 فيديو",
+      "students": "+5000 طالب",
+      "scores": "+750 نتيجة",
+      "daily_plan": "+80 يوم خطة يومية"
+    },
+    "floating_footer": {
+      "text_part1": "متبقي فقط ",
+      "highlight": "4 مقاعد",
+      "text_part2": " في مجموعة كورس اللغة الإنجليزية",
+      "button": "احجز الآن"
+    },
+    "leaderboard": {
+      "title_part1": "قائمة ",
+      "title_part2": "المتصدرين",
+      "title_part3": "",
+      "description": "احتفل بالتقدم والإنجاز. اكتشف الطلاب المتفوقين واستلهم منهم لمواصلة التحسن.",
+      "students": {
+        "student1": "معتز محمد",
+        "student2": "رامي علي",
+        "student3": "عمر أحمد",
+        "student4": "ملك مصطفى",
+        "student5": "هالة أسامة"
+      }
+    },
+    "footer": {
+      "copyright": "©جميع الحقوق محفوظة • أكاديمية عمار 2026"
+    },
+    "login": {
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "title": "تسجيل الدخول",
+      "welcome_back": "مرحباً بعودتك!",
+      "register": "تسجيل",
+      "forgot_password": "هل نسيت كلمة المرور؟",
+      "signIn": "تسجيل الدخول",
+      "other_login_methods": "طرق تسجيل دخول أخرى",
+      "dont_have_account": "ليس لديك حساب؟ ",
+      "create_account": "انشاء حساب"
+    },
+    "register": {
+      "fullName": "الاسم الكامل",
+      "firstName": "الاسم الأول",
+      "lastName": "اسم العائلة",
+      "title": "إنشاء حساب",
+      "nationality": "الجنسية",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "confirm_password": "تأكيد كلمة المرور",
+      "phone_number": "رقم الهاتف",
+      "parent_phone_number": "رقم هاتف ولي الأمر",
+      "login": "تسجيل الدخول",
+      "already_have_account": "لديك حساب؟ ",
+      "create_account": "انشاء حساب"
+    },
+    "forgot_password": {
+      "email": "البريد الإلكتروني",
+      "send": "ارسال",
+      "title": "هل نسيت كلمة المرور؟",
+      "description": "يرجى إدخال بريدك الإلكتروني لاستلام رابط لإعادة تعيين كلمة المرور."
+    },
+    "reset_password": {
+      "old_password": "كلمة المرور القديمة",
+      "new_password": "كلمة المرور الجديدة",
+      "confirm_new_password": "تأكيد كلمة المرور الجديدة",
+      "reset": "إعادة تعيين",
+      "title": "إعادة تعيين كلمة المرور",
+      "description": "يرجى إدخال كلمة المرور الجديدة."
+    },
+    "validations": {
+      "required": "مطلوب",
+      "invalid_email": "البريد الإلكتروني غير صالح",
+      "invalid_phone": "رقم الهاتف غير صالح",
+      "invalid_password": "كلمة المرور غير صالحة",
+      "mismatch_password": "كلمة المرور غير متطابقة",
+      "weak_password": "كلمة المرور ضعيفة",
+      "invalid_name": "الاسم غير صالح",
+      "invalid_english_name": "الاسم باللغة الإنجليزية غير صالح",
+      "invalid_arabic_name": "الاسم باللغة العربية غير صالح",
+      "invalid_username": "اسم المستخدم غير صالح"
+    }
+  }
+}
