@@ -256,6 +256,9 @@
       "subscribe": "Subscribe Now",
       "currency": " EGP"
     },
+    "video_feedback": {
+      "title": "Hear It From Our Students"
+    },
     "testimonials": {
       "title": "What Our Students Say",
       "student1": {
@@ -305,7 +308,61 @@
       }
     },
     "footer": {
-      "copyright": "©All rights reserved • Ammar Academy 2026"
+      "copyright": "©All rights reserved • Ammar Academy 2026",
+      "about_us": "About Us",
+      "privacy_policy": "Privacy & Policy"
+    },
+    "about_us": {
+      "title_part1": "About ",
+      "title_part2": "Us",
+      "p1": "Ammar SAT Academy is a results-driven learning system designed specifically for American Diploma students aiming to achieve high scores in SAT, ACT, and EST exams. Founded by Ammar Adel, the Academy was built on a clear mission: to transform the way students prepare—moving beyond traditional teaching into a structured system that delivers measurable improvement.",
+      "p2": "At Ammar Academy, preparation is not random practice; it is strategic. Students are trained to understand the logic behind every question, recognize common traps, and apply time-management techniques that maximize performance under real test conditions. Each course combines live interactive sessions with carefully designed recorded lessons, ensuring both engagement and mastery.",
+      "p3": "What sets Ammar Academy apart is its strong follow-up and accountability system. Students receive weekly assignments, regular mock tests, and continuous performance tracking. Parents are kept informed through detailed progress reports, creating a supportive environment that drives consistency and discipline.",
+      "p4": "The Academy has helped thousands of students significantly improve their scores, with many achieving outstanding results in SAT English and Math. These successes are not exceptions—they are the outcome of a proven system that focuses on clarity, practice, and feedback.",
+      "p5": "With a growing community of ambitious students and a commitment to excellence, Ammar SAT Academy continues to set a new standard for test preparation in Egypt and across the Arab world.",
+      "p6": "Smart preparation leads to smart results."
+    },
+    "privacy_policy": {
+      "title_part1": "Privacy ",
+      "title_part2": "& Policy",
+      "subtitle": "Student Policy and Registration Terms - Ammar Academy",
+      "effective_date": "Effective from June 2025",
+      "intro": "By registering in one of the SAT, ACT, or EST preparation programs offered by Ammar Academy, the student and their guardian acknowledge and agree to all the following policies and terms:",
+      "s1_title": "1. Attendance and Participation Policy",
+      "s1_p1": "Students must attend all live sessions and follow recorded videos weekly.",
+      "s1_p2": "Participation in weekly tests and homework submission is an essential part of the evaluation.",
+      "s1_p3": "In case of absence, a written excuse must be sent within 48 hours.",
+      "s1_p4": "Acceptable excuses include:",
+      "s1_p4_b1": "Medical conditions (with supporting documentation)",
+      "s1_p4_b2": "School exams or academic circumstances",
+      "s1_p4_b3": "Travel or urgent family circumstances",
+      "s1_p5": "Repeated unexcused absences lead to cancellation of the free re-enrollment privilege or exclusion from study groups.",
+      "s2_title": "2. Free Course Re-enrollment Policy",
+      "s2_p1": "Students are entitled to re-enroll in the course more than once with an administrative fee of 700 EGP per subject for each re-enrollment, subject to the Academy's available schedule, provided that:",
+      "s2_p1_b1": "Attendance of at least 70% of live sessions",
+      "s2_p1_b2": "Completion of at least 50% of assignments and tests",
+      "s2_p1_b3": "A verified written excuse in case of prolonged absence",
+      "s2_p1_b4": "Re-enrollment request submitted within 7 days of course end or at least one month before the new course starts",
+      "s2_p2": "An administrative fee of only 700 EGP is collected upon re-enrollment.",
+      "s3_title": "3. Refund Policy",
+      "s3_intro": "In case of withdrawal from the course after registration, fees are refunded according to the following policy:",
+      "s3_b1": "If registration is cancelled before the course starts: 90% of the paid fees are refunded.",
+      "s3_b2": "If withdrawal occurs during the first week: 70% of the fees are refunded.",
+      "s3_b3": "If withdrawal occurs during the second week: 50% of the fees are refunded.",
+      "s3_b4": "If withdrawal occurs after the second week: no refund is applicable.",
+      "s3_b5": "If the course is cancelled by the Academy: 100% of the amount is refunded.",
+      "s3_p1": "Refund requests must be submitted in writing via email or official WhatsApp, and the refund process takes 10 to 15 business days.",
+      "s4_title": "4. Student Conduct and Academic Integrity",
+      "s4_p1": "All students are expected to maintain proper conduct, mutual respect, and refrain from cheating or copying assignments.",
+      "s4_p2": "Sharing educational materials with others outside the course is prohibited.",
+      "s4_p3": "Any violation may result in immediate dismissal without fee refund.",
+      "s5_title": "5. Official Communication Channels",
+      "s5_p1": "Communication with students is conducted through:",
+      "s5_b1": "Course-specific WhatsApp groups",
+      "s5_b2": "Email: info@ammaracademy.com",
+      "s5_p2": "Monthly performance reports are sent to parents when needed.",
+      "s6_title": "6. Policy Acknowledgment",
+      "s6_p1": "By confirming registration, the student and their guardian are considered to have agreed to all the above terms and policies. This policy aims to ensure a fair and organized educational environment that helps students achieve the best possible performance."
     },
     "login": {
       "email": "Email",
