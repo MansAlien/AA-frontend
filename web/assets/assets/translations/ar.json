@@ -479,7 +479,9 @@
     "congratulations": "تهانينا!",
     "keep_practicing": "استمر في التدرب!",
     "completed_on": "اكتمل في {date}",
-    "total_questions": "إجمالي الأسئلة"
+    "total_questions": "إجمالي الأسئلة",
+    "content_unavailable_title": "المحتوى غير متاح",
+    "content_unavailable_description": "هذا الاختبار غير جاهز بعد. يرجى المحاولة لاحقاً أو التواصل مع الدعم."
   },
   "question": {
     "answer_required": "يرجى الإجابة على السؤال قبل المتابعة.",

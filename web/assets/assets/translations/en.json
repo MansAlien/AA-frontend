@@ -478,7 +478,9 @@
     "congratulations": "Congratulations!",
     "keep_practicing": "Keep practicing!",
     "completed_on": "Completed on {date}",
-    "total_questions": "Total Questions"
+    "total_questions": "Total Questions",
+    "content_unavailable_title": "Content not available",
+    "content_unavailable_description": "This test isn't ready yet. Please try again later or contact support."
   },
   "question": {
     "answer_required": "Please answer the question before continuing.",
