@@ -479,5 +479,18 @@
     "keep_practicing": "Keep practicing!",
     "completed_on": "Completed on {date}",
     "total_questions": "Total Questions"
+  },
+  "question": {
+    "answer_required": "Please answer the question before continuing.",
+    "multi_hint": "Select {min}–{max} answers",
+    "max_words": "max {count} words",
+    "unsupported": "This question type isn't supported in this version.",
+    "instructions_mcq": "Choose one answer.",
+    "instructions_true_false": "Choose TRUE if the statement agrees with the text, FALSE if it contradicts the text, or NOT GIVEN if there is no information.",
+    "instructions_gaps": "Fill in each gap with your answer.",
+    "instructions_numeric": "Type your answer as a number.",
+    "instructions_matching": "Match each item by choosing an answer from the dropdown.",
+    "instructions_title": "Instructions",
+    "instructions_close": "Got it"
   }
 }

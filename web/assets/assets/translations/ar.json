@@ -480,5 +480,18 @@
     "keep_practicing": "استمر في التدرب!",
     "completed_on": "اكتمل في {date}",
     "total_questions": "إجمالي الأسئلة"
+  },
+  "question": {
+    "answer_required": "يرجى الإجابة على السؤال قبل المتابعة.",
+    "multi_hint": "اختر من {min} إلى {max} إجابات",
+    "max_words": "بحد أقصى {count} كلمات",
+    "unsupported": "نوع السؤال هذا غير مدعوم في هذا الإصدار.",
+    "instructions_mcq": "اختر إجابة واحدة.",
+    "instructions_true_false": "اختر TRUE إذا كانت العبارة تتفق مع النص، وFALSE إذا كانت تناقضه، وNOT GIVEN إذا لم توجد معلومات.",
+    "instructions_gaps": "املأ كل فراغ بإجابتك.",
+    "instructions_numeric": "اكتب إجابتك كرقم.",
+    "instructions_matching": "طابق كل عنصر باختيار إجابة من القائمة المنسدلة.",
+    "instructions_title": "التعليمات",
+    "instructions_close": "حسناً"
   }
 }
