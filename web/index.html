@@ -751,12 +751,32 @@
         }
       }
 
-      function performSilentUpdate(versionData) {
+      async function performSilentUpdate(versionData) {
         // Update stored version
         localStorage.setItem(VERSION_STORAGE_KEY, versionData.version);
 
-        // Perform hard refresh silently
-        window.location.reload(true);
+        // reload(true) is ignored by modern browsers and does NOT bypass the
+        // service worker or the HTTP cache. Tear both down explicitly, then
+        // reload — otherwise the user keeps getting the old bundle until they
+        // hard refresh.
+        try {
+          if ("serviceWorker" in navigator) {
+            const regs = await navigator.serviceWorker.getRegistrations();
+            await Promise.all(regs.map((r) => r.unregister()));
+          }
+          if (window.caches) {
+            const keys = await caches.keys();
+            await Promise.all(keys.map((k) => caches.delete(k)));
+          }
+        } catch (error) {
+          console.warn("Cache teardown failed:", error);
+        }
+
+        // Cache-busting query param forces a fresh document fetch even if the
+        // host still hands out a cached index.html.
+        const url = new URL(window.location.href);
+        url.searchParams.set("v", versionData.version);
+        window.location.replace(url.toString());
       }
 
       // Initial version check on load
