@@ -773,11 +773,30 @@
         }
 
         // Cache-busting query param forces a fresh document fetch even if the
-        // host still hands out a cached index.html.
+        // host still hands out a cached index.html. It is stripped from the
+        // address bar on the next load — see below.
         const url = new URL(window.location.href);
         url.searchParams.set("v", versionData.version);
         window.location.replace(url.toString());
       }
+
+      // Drop the ?v= buster once it has done its job. It only needs to be on
+      // the wire for the reload request itself; leaving it in the address bar
+      // means users see and share links carrying ?v=1.0.4%2B41 (searchParams
+      // percent-encodes the +) forever after any update. replaceState rewrites
+      // the bar without a navigation and preserves the path and every other
+      // query param, so deep links and the router are unaffected. Runs at
+      // parse time, before flutter_bootstrap.js starts the router.
+      (function stripVersionParam() {
+        try {
+          const current = new URL(window.location.href);
+          if (!current.searchParams.has("v")) return;
+          current.searchParams.delete("v");
+          window.history.replaceState(null, "", current.toString());
+        } catch (error) {
+          console.warn("Could not strip version param:", error);
+        }
+      })();
 
       // Initial version check on load
       window.addEventListener("load", function () {
