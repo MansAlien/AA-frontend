@@ -228,3 +228,5 @@ if (nativeWakeLock != true) {
   // is an easy fix that realiably works.
   Wakelock.enabled()
 }
+!function(){try{var e="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]="e17ecf67-de61-5205-84d7-9194dbee5cd5")}catch(e){}}();
+//# debugId=e17ecf67-de61-5205-84d7-9194dbee5cd5
