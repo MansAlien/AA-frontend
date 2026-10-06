@@ -159,6 +159,9 @@
       "title": "الدورات الشائعة",
       "designed_for_you": "دورات صممت خصيصا لك",
       "explore_courses": "استكشف الدورات",
+      "view_all": "عرض الكل",
+      "all_courses": "جميع الدورات",
+      "empty": "لا توجد دورات متاحة حاليًا",
       "web_development": {
         "title": "تطوير الويب",
         "description": "أتقن تقنيات الويب الحديثة",

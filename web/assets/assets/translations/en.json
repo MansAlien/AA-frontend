@@ -158,6 +158,9 @@
       "title": "Popular Courses",
       "designed_for_you": "Courses Designed for You",
       "explore_courses": "Explore The Courses",
+      "view_all": "View All",
+      "all_courses": "All Courses",
+      "empty": "No courses available at the moment",
       "web_development": {
         "title": "Web Development",
         "description": "Master modern web technologies",

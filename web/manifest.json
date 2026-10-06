@@ -1,11 +1,11 @@
 {
-    "name": "educational_system",
-    "short_name": "educational_system",
+    "name": "Ammar Academy",
+    "short_name": "Ammar Academy",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Ammar Academy: SAT, EST, and IELTS courses with structured video lessons, question banks, full mock tests, and instant feedback, all in one place.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
