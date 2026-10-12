@@ -68,7 +68,8 @@
     "search": "Search",
     "login_required": "Login Required",
     "login_required_message": "You need to login to access this page",
-    "retry": "Retry"
+    "retry": "Retry",
+    "back": "Back"
   },
   "notifications": {
     "title": "Notifications",
@@ -77,7 +78,11 @@
     "empty_subtitle": "We'll notify you when something arrives",
     "time_minutes_ago": "{{minutes}}m ago",
     "time_hours_ago": "{{hours}}h ago",
-    "time_days_ago": "{{days}}d ago"
+    "time_days_ago": "{{days}}d ago",
+    "see_all": "See all",
+    "web_push_title": "Get notifications in this browser",
+    "web_push_enable": "Enable",
+    "web_push_blocked": "Notifications are blocked for this site. Allow them in your browser's site settings to get alerts."
   },
   "my_courses": {
     "continue": "Continue",

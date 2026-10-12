@@ -806,7 +806,15 @@
         try {
           if ("serviceWorker" in navigator) {
             const regs = await navigator.serviceWorker.getRegistrations();
-            await Promise.all(regs.map((r) => r.unregister()));
+            // Keep the push worker: unregistering it would silently switch
+            // off browser notifications after every deploy.
+            const isPushWorker = (r) =>
+              [r.active, r.waiting, r.installing].some(
+                (w) => w && w.scriptURL.endsWith("/firebase-messaging-sw.js"),
+              );
+            await Promise.all(
+              regs.filter((r) => !isPushWorker(r)).map((r) => r.unregister()),
+            );
           }
           if (window.caches) {
             const keys = await caches.keys();
@@ -861,6 +869,6 @@
       });
     </script>
 
-    <script src="flutter_bootstrap.js?v=51" async></script>
+    <script src="flutter_bootstrap.js?v=52" async></script>
   </body>
 </html>
