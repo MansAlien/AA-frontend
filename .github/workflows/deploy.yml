@@ -1,9 +1,10 @@
 name: Deploy website
 
 # Every push to main is a new web build (1.0.4+NN), so it goes live right
-# away: `git pull` in AA-frontend on the droplet, through the locked-down
-# deploy key (AA-backend scripts/server/deploy.sh). Can also be re-run from
-# the Actions tab.
+# away: `git pull` in AA-frontend on the droplet, then `docker-compose
+# restart` in AA-backend-prod, through the locked-down deploy key
+# (AA-backend scripts/server/deploy.sh). Can also be re-run from the
+# Actions tab.
 on:
   push:
     branches: [main]
@@ -11,7 +12,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: production-frontend
+  group: production-deploy
   cancel-in-progress: false
 
 permissions:
@@ -20,12 +21,13 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
+    env:
+      DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+      DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
     steps:
-      - name: Pull on the server over SSH
+      - name: Set up the SSH key
         env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
           DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
           DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
         run: |
@@ -34,11 +36,21 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
           # Pinned host key: the connection fails if the server's key changes.
           printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+
+      - name: Pull the website on the server
+        run: |
           ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes \
             -o StrictHostKeyChecking=yes \
             "$DEPLOY_USER@$DEPLOY_HOST" frontend
 
+      - name: Restart the backend
+        run: |
+          ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes \
+            -o StrictHostKeyChecking=yes \
+            "$DEPLOY_USER@$DEPLOY_HOST" backend
+
       - name: Check the live version
         run: |
-          sleep 5
-          curl -fsS "https://ammar-academy.com/version.json?ts=$(date +%s)"
+          # nginx is part of the restarted stack; give it a moment.
+          curl -fsS --retry 10 --retry-delay 3 --retry-all-errors \
+            "https://ammar-academy.com/version.json?ts=$(date +%s)"
