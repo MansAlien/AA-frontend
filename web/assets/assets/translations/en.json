@@ -69,7 +69,8 @@
     "login_required": "Login Required",
     "login_required_message": "You need to login to access this page",
     "retry": "Retry",
-    "back": "Back"
+    "back": "Back",
+    "go_home": "Go to home"
   },
   "notifications": {
     "title": "Notifications",
@@ -92,7 +93,14 @@
     "error_title": "Failed to load courses"
   },
   "subscription": {
-    "error_title": "Failed to load subscription"
+    "error_title": "Failed to load subscription",
+    "order_placed_title": "Order placed",
+    "order_placed_body": "Order #{number} for {total} is pending. Your access starts once the payment is confirmed.",
+    "my_subscriptions": "My subscriptions",
+    "payment_unavailable": "Online payment is coming soon. For now, only free courses can be ordered.",
+    "enrolled_title": "You're enrolled",
+    "enrolled_body": "{name} is now in My Courses.",
+    "go_to_my_courses": "Go to My Courses"
   },
   "landing": {
     "header": {
@@ -506,5 +514,21 @@
     "instructions_matching": "Match each item by choosing an answer from the dropdown.",
     "instructions_title": "Instructions",
     "instructions_close": "Got it"
+  },
+  "email_verification": {
+    "verified": "Verified",
+    "not_verified": "Not verified",
+    "send_email": "Send verification email",
+    "sent_to": "Verification email sent to {email}",
+    "dialog_title": "Verify your email first",
+    "dialog_body": "You need a verified email to place an order. We'll send a verification link to {email}. Verify now?",
+    "dialog_confirm": "Send email",
+    "verifying": "Verifying your email…",
+    "success_title": "Email verified",
+    "success_body": "Your email is verified. You can now place orders.",
+    "expired_title": "Link invalid or expired",
+    "expired_body": "This verification link doesn't work anymore. Ask for a new one.",
+    "send_new_link": "Send a new link",
+    "login_to_resend": "Log in to get a new link"
   }
 }

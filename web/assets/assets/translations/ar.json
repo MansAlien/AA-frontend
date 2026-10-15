@@ -70,7 +70,8 @@
     "login_required": "تسجيل الدخول مطلوب",
     "login_required_message": "يجب عليك تسجيل الدخول لعرض هذه الصفحة",
     "retry": "إعادة المحاولة",
-    "back": "رجوع"
+    "back": "رجوع",
+    "go_home": "الذهاب إلى الرئيسية"
   },
   "notifications": {
     "title": "الإشعارات",
@@ -93,7 +94,14 @@
     "error_title": "فشل تحميل الدورات"
   },
   "subscription": {
-    "error_title": "فشل تحميل الاشتراك"
+    "error_title": "فشل تحميل الاشتراك",
+    "order_placed_title": "تم تقديم الطلب",
+    "order_placed_body": "الطلب رقم {number} بقيمة {total} قيد المراجعة. سيبدأ وصولك بمجرد تأكيد الدفع.",
+    "my_subscriptions": "اشتراكاتي",
+    "payment_unavailable": "الدفع الإلكتروني متاح قريباً. حالياً يمكن طلب الدورات المجانية فقط.",
+    "enrolled_title": "تم تسجيلك",
+    "enrolled_body": "{name} متاح الآن في دوراتي.",
+    "go_to_my_courses": "الذهاب إلى دوراتي"
   },
   "landing": {
     "header": {
@@ -507,5 +515,21 @@
     "instructions_matching": "طابق كل عنصر باختيار إجابة من القائمة المنسدلة.",
     "instructions_title": "التعليمات",
     "instructions_close": "حسناً"
+  },
+  "email_verification": {
+    "verified": "موثق",
+    "not_verified": "غير موثق",
+    "send_email": "إرسال بريد التحقق",
+    "sent_to": "تم إرسال بريد التحقق إلى {email}",
+    "dialog_title": "قم بتأكيد بريدك الإلكتروني أولاً",
+    "dialog_body": "تحتاج إلى بريد إلكتروني مؤكد لإتمام الطلب. سنرسل رابط التحقق إلى {email}. هل تريد التأكيد الآن؟",
+    "dialog_confirm": "إرسال البريد",
+    "verifying": "جارٍ التحقق من بريدك الإلكتروني…",
+    "success_title": "تم تأكيد البريد الإلكتروني",
+    "success_body": "تم تأكيد بريدك الإلكتروني. يمكنك الآن إتمام الطلبات.",
+    "expired_title": "الرابط غير صالح أو منتهي الصلاحية",
+    "expired_body": "رابط التحقق هذا لم يعد يعمل. اطلب رابطاً جديداً.",
+    "send_new_link": "إرسال رابط جديد",
+    "login_to_resend": "سجّل الدخول للحصول على رابط جديد"
   }
 }
